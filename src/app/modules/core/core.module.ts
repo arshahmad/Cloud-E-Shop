@@ -5,6 +5,7 @@ import {PageComponent} from '@ecm-modules/core/components/page/page.component';
 import {FeaturesComponent} from '@ecm-modules/core/components/features/features.component';
 import {ButtonService} from '@ecm-app/button.service';
 import {SocialMComponent} from '@ecm-modules/core/components/social-m/social-m.component';
+import {FooterComponent} from '@ecm-modules/core/components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import {SocialMComponent} from '@ecm-modules/core/components/social-m/social-m.c
     PageComponent,
     FeaturesComponent,
     SocialMComponent,
+    FooterComponent,
   ],
   exports: [
     HomeComponent
