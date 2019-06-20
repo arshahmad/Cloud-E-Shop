@@ -1,0 +1,17 @@
+@import "~src/sass/themes";
+@import "~src/sass/mixins/flex-mixins";
+.social {
+  @include em-fx-layout-with-gap(row, 30px);
+  @include em-fx-layout-alignment(center, center);
+  background-color: rgba(48, 202, 255, 0.33);
+  height: 76px;
+.button1 {
+  background-color: $primary-color;
+  color: white;
+  border: 1px solid;
+  .mat-icon {
+    color: white;
+  }
+
+}
+}

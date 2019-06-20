@@ -19,4 +19,3 @@ export class HomeComponent {
     this._eventBus.broadcast('drawer');
   }
 }
-
