@@ -1,0 +1,86 @@
+@mixin em-only-for-screen-sizes($sizes...) {
+  @if (length($sizes) > 0) {
+    $selectors: ();
+    @each $size in $sizes {
+      $selectors: join(
+          $selectors,
+          unquote(":host-context(.#{$size}) & "),
+          comma
+      );
+    }
+    #{$selectors} {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+@mixin em-fx-layout($direction: row, $sizes...) {
+  @include em-only-for-screen-sizes($sizes...) {
+    display: flex;
+    flex-direction: $direction;
+  }
+}
+
+
+
+@mixin em-fx-layout($direction: row, $sizes...) {
+  @include em-only-for-screen-sizes($sizes...) {
+    display: flex;
+    flex-direction: $direction;
+  }
+}
+
+@mixin em-fx-layout-with-gap($direction, $value, $sizes...) {
+  @include em-fx-layout($direction, $sizes...);
+  @include em-only-for-screen-sizes($sizes...) {
+    @if ($direction == row) {
+      > * {
+        margin-right: $value;
+      }
+      > *:last-child {
+        margin-right: 0;
+      }
+    } @else if ($direction == column) {
+      > * {
+        margin-bottom: $value;
+      }
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    } @else if ($direction == reverse-row) {
+      > * {
+        margin-left: $value;
+      }
+      > *:last-child {
+        margin-left: 0;
+      }
+    } @else if ($direction == reverse-column) {
+      > * {
+        margin-top: $value;
+      }
+      > *:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@mixin em-fx-layout-alignment(
+  $main-axis-alignment: flex-start,
+  $cross-axis-alignment: flex-start,
+  $sizes...
+) {
+  @include em-only-for-screen-sizes($sizes...) {
+    justify-content: $main-axis-alignment;
+    align-items: $cross-axis-alignment;
+    align-content: $cross-axis-alignment;
+  }
+}
+
+@mixin em-fx-flex-align($direction, $sizes...) {
+  @include em-only-for-screen-sizes($sizes...) {
+    align-self: $direction;
+  }
+}

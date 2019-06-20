@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import "sass/themes";
+@import "sass/mixins/flex-mixins";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, a, h1, h2, p, span, label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.bold {
+  font-family: 'Francois One', sans-serif;
+  color: #000000c4;
+}
+
+p, label {
+  font-size: 14px;
+}
+
+.alert .mat-simple-snackbar {
+  justify-content: center;
+  min-width: fit-content;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #dff0d8 !important;
+  border-color: #d0e9c6 !important;
+  color: #3c763d !important;
+}
+
+.alert-error {
+  background-color: #f2dede !important;
+  border-color: #ebcccc !important;
+  color: #a94442 !important;
+}
+
+
+.mat-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+  transition: all 1s ease-in-out;
+}
+
+.mat-card:hover {
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.18) !important;
+}
+
+mat-icon {
+  color: rgb(88, 88, 88);
+}
+
+.iti-flag {
+  background-image: url("/assets/background.png") !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .iti-flag {
+    background-image: url("/assets/background.png") !important;
+  }
+}
+
+// Button
+.btn {
+  background-color: #383838;
+  box-shadow: none !important;
+  border-radius: 50px !important;
+  color: white !important;
+  line-height: 30px !important;
+}
+
+.btn:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.min-btn {
+  min-width: 160px !important;
+}
+
+.success-btn {
+  background-color: $sucess-color !important;
+}
+
+.danger-btn {
+  background-color: $danger-color !important;
+}
+
+.warning-button {
+  background-color: $warning-color !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus, ecm-button:focus {
+  outline: none;
+}
+
+.mat-option {
+  line-height: 24px;
+  height: 40px;
+
+  span.mat-option-text {
+    line-height: 24px;
+    font-size: 13px;
+  }
+}
+
+.mat-menu-content {
+  padding: 0 !important;
+
+  .mat-list {
+    padding-top: 0 !important;
+
+    .mat-list-item-content {
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+}
+
+.dialog {
+  min-width: 300px;
+
+  &.lg {
+    max-width: 76vw !important;
+  }
+
+  &.sm {
+    max-width: 300px !important;
+  }
+
+  .mat-dialog-container {
+    min-height: 200px;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .title {
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0;
+    background-color: $primary-color;
+    color: white;
+  }
+
+  .content {
+    min-height: 130px;
+    @include em-fx-layout(column);
+    @include em-fx-layout-alignment(space-between, stretch);
+
+    .actions {
+      padding: 0 20px 20px 0;
+      @include em-fx-layout-with-gap(row, 20px);
+      @include em-fx-layout-alignment(flex-end, center);
+    }
+  }
+}
+
+// ng2-dragula CSS
+
+div.image-box {
+  border-bottom: solid 1px #ccc;
+  background: white;
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  cursor: move;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .mat-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 50%;
+  }
+}
+
+/* in-flight clone */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+/* IntroJS */
+.introjs-skipbutton.introjs-donebutton, .introjs-skipbutton {
+  display: inline-block !important;
+  color: black !important;
+}
+
+.introjs-tooltipbuttons .introjs-nextbutton {
+  background-color: $primary-color !important;
+  color: white !important;
+  background-image: none !important;
+  padding: 0.4em 0.9em !important;
+  border-radius: 5px !important;
+  margin-left: 5px !important;
+  text-shadow: none !important;
+}
+
+.introjs-tooltipbuttons .introjs-prevbutton {
+  border-right: 1px #d4d4d4 solid;
+  border-radius: 0.2rem;
+}
+
+.introjs-tooltip.targeted, .introjs-tooltip.bottom-tip {
+  max-width: 600px !important;
+}
+
+.introjs-tooltip.bottom-tip {
+  left: 50% !important;
+}
+
+.introjs-tooltip li {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.hide-buttons {
+  .introjs-tooltipbuttons, .introjs-skipbutton.introjs-donebutton, .introjs-skipbutton {
+    display: none !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .introjs-tooltip.central {
+    max-width: 900px !important;
+    min-width: 300px !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .introjs-tooltip.central {
+    max-width: 900px !important;
+    min-width: 600px !important;
+  }
+}
+
+/* Mat Autocomplete Styling */
+.scroll {
+  max-height: 200px !important;
+  overflow-y: scroll !important;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 7px !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #525252 !important;
+    border-radius: 10px !important;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #30333D !important;
+    border-radius: 10px !important;
+  }
+}

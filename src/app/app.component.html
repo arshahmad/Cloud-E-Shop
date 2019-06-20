@@ -1,0 +1,34 @@
+<mat-drawer-container class="sidenav">
+<mat-drawer #leftDrawer  [(opened)]="opened" [mode]="'over'" [position]="'start'" class="left-drawer">
+  <div class="main">
+    <img class="logo" src="../../../../../assets/shop_logo.png">
+    <mat-form-field>
+      <input matInput placeholder="Search">
+    </mat-form-field>
+    <h4>E-Shop</h4>
+
+    <div class="main__details" (click)="$event.stopPropagation()">
+      <div class="hover"><p>MDB pro</p></div>
+      <div class="hover"><p>Css</p></div>
+      <div class="hover"><p>Products</p></div>
+      <div class="hover"><p>Navigation</p></div>
+      <div class="hover"><p>Forms</p></div>
+      <div class="hover"><p>Content</p></div>
+      <div class="hover"><p>Tables</p></div>
+      <div class="hover"><p>Tutorials</p></div>
+      <div class="hover"><p>Sections</p></div>
+      <div class="hover"><p>Plugins</p></div>
+
+    </div>
+
+  </div>
+</mat-drawer>
+  <mat-drawer-content>
+<!--    <button (click)="leftDrawer.toggle()" class="left-drawer-button" mat-icon-button>-->
+<!--      <mat-icon>list</mat-icon>-->
+<!--    </button>-->
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+<!--<router-outlet></router-outlet>-->

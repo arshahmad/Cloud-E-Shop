@@ -1,0 +1,217 @@
+@import "~src/sass/mixins/flex-mixins";
+@import "~src/sass/themes";
+
+.button {
+  cursor: pointer;
+  width: fit-content;
+  @include em-fx-layout-with-gap(row, 10px);
+  @include em-fx-layout-alignment(flex-start, center);
+
+  .icon-button {
+    border: none;
+    padding: 0;
+  }
+
+  &.default {
+    background-color: transparent;
+
+    span {
+      color: $primary-color;
+    }
+
+    .icon-button {
+      background-color: $primary-color;
+      padding: 7px;
+      border-radius: 50%;
+    }
+
+    .mat-icon {
+      color: white;
+    }
+  }
+
+  &.green {
+    background-color: $shopify-color;
+
+    span {
+      color: white;
+    }
+
+    .icon-button {
+      background-color: $shopify-color;
+    }
+
+    .mat-icon {
+      color: white;
+    }
+  }
+
+  &.black {
+    background-color: white;
+
+    span {
+      color: $primary-color;
+    }
+
+    .icon-button {
+      background-color: white;
+    }
+
+    .mat-icon {
+      color: $primary-color;
+    }
+  }
+
+  &.white {
+    background-color: $primary-color;
+
+    span {
+      color: white;
+    }
+
+    .icon-button {
+      background-color: $primary-color;
+    }
+
+    .mat-icon {
+      color: white;
+    }
+  }
+
+  &.red {
+    background-color: $danger-color;
+
+    span {
+      color: white;
+    }
+
+    .icon-button {
+      background-color: $danger-color;
+    }
+
+    .mat-icon {
+      color: white;
+    }
+  }
+
+  &.blue {
+    background-color: $sucess-color;
+
+    span {
+      color: white;
+    }
+
+    .icon-button {
+      background-color: $sucess-color;
+    }
+
+    .mat-icon {
+      color: white;
+    }
+  }
+}
+
+:host(.round) {
+  .button {
+    border-radius: 20px;
+  }
+}
+
+:host(.text-right) {
+  .button {
+    span {
+      order: 2;
+      margin-right: 0;
+    }
+
+    button {
+      order: 1;
+      margin-right: 10px;
+    }
+  }
+}
+
+:host(.vert) {
+  .button {
+    @include em-fx-layout-with-gap(column, 10px);
+    @include em-fx-layout-alignment(flex-start, center);
+
+    span {
+      order: 2;
+      margin-bottom: 0 !important;
+    }
+
+    button {
+      order: 1;
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+:host(.square) {
+  button {
+    border-radius: 0 !important;
+  }
+}
+
+:host(.sm) {
+  &.round {
+    .button {
+      padding: 3px 12px;
+    }
+  }
+
+  .button {
+    span {
+      font-size: 10px;
+      margin-right: 5px;
+    }
+
+    .mat-icon {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+:host(.md) {
+  &.round {
+    .button {
+      padding: 5px 15px;
+    }
+  }
+
+  .button {
+    span {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    .mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+:host(.lg) {
+  &.round {
+    .button {
+      padding: 7px 20px;
+    }
+  }
+
+  .button {
+    span {
+      font-size: 16px;
+    }
+
+    .mat-icon {
+      font-size: 22px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

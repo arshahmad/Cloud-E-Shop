@@ -1,0 +1,53 @@
+@import "~src/sass/themes";
+@import "~src/sass/mixins/flex-mixins";
+.main-features {
+  margin-top: 60px;
+  @include em-fx-layout-with-gap(column, 40px);
+  @include em-fx-layout-alignment(flex-start, center);
+  .features-list{
+    @include em-fx-layout-with-gap(row, 20px);
+    @include em-fx-layout-alignment(flex-start,flex-start);
+    img {
+      width:400px;
+    }
+  }
+  .feature-text {
+    @include em-fx-layout-with-gap(column, 10px);
+    @include em-fx-layout-alignment(flex-start, flex-start);
+    width: 500px;
+  }
+  .available-versions {
+    @include em-fx-layout-with-gap(column,60px);
+    @include em-fx-layout-alignment(flex-start, center);
+    .cards {
+      @include em-fx-layout-with-gap(row,40px);
+      @include em-fx-layout-alignment(space-evenly, flex-start);
+      mat-card {
+        @include em-fx-layout-with-gap(column, 20px);
+        @include em-fx-layout-alignment(flex-start, center);
+      }
+
+      .card1 {
+        height: 280px;
+        width: 126px;
+        .img1 {
+          width: 81px;
+          margin-left: 18px;
+        }
+      }
+      .card2 {
+        height: 220px;
+        width: 126px;
+        text-align: center;
+        img {
+          width: 81px;
+        }
+      }
+      .button1 {
+        background-color: #424242;
+        color: white;
+      }
+    }
+  }
+
+}

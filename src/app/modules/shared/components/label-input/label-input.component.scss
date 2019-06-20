@@ -1,0 +1,42 @@
+@import "~src/sass/mixins/flex-mixins";
+@import "~src/sass/themes";
+
+.input-container {
+  width: 100%;
+  @include em-fx-layout-with-gap(row, 30px);
+  @include em-fx-layout-alignment(space-between, flex-start);
+
+  span {
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 15px;
+    color: $primary-color;
+    font-weight: 400;
+  }
+
+  input:disabled {
+    color: gray;
+  }
+
+  ::ng-deep {
+    .mat-form-field {
+      width: 70%;
+    }
+
+    .mat-form-field-infix {
+      padding-top: 0;
+      border-top: none;
+      line-height: 0;
+    }
+
+    .mat-form-field-wrapper {
+      padding-bottom: 1rem;
+    }
+
+    .mat-form-field-ripple {
+      background-color: transparent;
+    }
+  }
+}

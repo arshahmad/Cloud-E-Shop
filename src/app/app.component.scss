@@ -1,0 +1,35 @@
+@import "~src/sass/themes";
+@import "~src/sass/mixins/flex-mixins";
+.sidenav {
+  height: 100vh !important;
+  background-color: white;
+  .main {
+    @include em-fx-layout(column);
+    align-items: center;
+    margin-top: 15%;
+    .logo {
+      width:160px;
+    }
+  }
+
+  .left-drawer {
+    width: 280px;
+    background-color:lightcyan;
+  }
+  .main__details {
+    @include em-fx-layout-with-gap(column, 1px);
+    @include em-fx-layout-alignment(center, center);
+    width: 100%;
+  }
+
+  .hover:hover {
+    background-color: rgba(209, 241, 241, 0.96);
+  }
+
+  .hover {
+    width: 100%;
+    @include em-fx-layout(row);
+    @include em-fx-layout-alignment(center, flex-start);
+    cursor: pointer;
+  }
+}

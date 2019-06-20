@@ -1,0 +1,41 @@
+@import "~src/sass/themes";
+@import "~src/sass/mixins/flex-mixins";
+.main-conatainer {
+  background-color: white;
+  height: 100%;
+  //@include em-fx-layout-with-gap(column,20px);
+  //@include em-fx-layout-alignment(flex-start, center);
+
+  .header {
+    mat-card {
+      @include em-fx-layout(row);
+      @include em-fx-layout-alignment(space-between, center);
+      background-color: rgba(48, 202, 255, 0.33);
+     .buttons {
+      @include em-fx-layout-with-gap(row, 20px);
+      @include em-fx-layout-alignment(flex-start, center);
+      .button1 {
+        background-color: limegreen;
+        color: white;
+      }
+      .button {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+      .login-section {
+        display: flex;
+        @include em-fx-layout-with-gap(row, 20px);
+        @include em-fx-layout-alignment(flex-start, center);
+        .a {
+          @include em-fx-layout-with-gap(row, 5px);
+          @include em-fx-layout-alignment(flex-start, center);
+        }
+.login-button {
+  background-color: $primary-color;
+  color: white;
+}
+      }
+    }
+  }
+}

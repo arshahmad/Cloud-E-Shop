@@ -1,0 +1,12 @@
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin absolute-fill {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

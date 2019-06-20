@@ -1,0 +1,88 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary-color: #2eccff;
+$secondary-color: white;
+$color-black: black;
+$warning-color: #E4C031;
+$danger-color: #DE3445;
+$sucess-color: #16A2B8;
+$shopify-color: #95BF46;
+$vaetas-color: #81bfe9;
+
+$color-transparent: unquote('#00000000');
+
+
+$ecm-primary: (
+  50 : #e6f4fa,
+  100 : #c1e3f2,
+  200 : #98d0ea,
+  300 : #6ebde1,
+  400 : #4fafda,
+  500 : #30a1d4,
+  600 : #2b99cf,
+  700 : #248fc9,
+  800 : #1e85c3,
+  900 : #1374b9,
+  A100 : #eaf5ff,
+  A200 : #b7dfff,
+  A400 : #84c8ff,
+  A700 : #6abcff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$ecm-accent: (
+  50 : #e6f4fa,
+  100 : #c1e3f2,
+  200 : #98d0ea,
+  300 : #6ebde1,
+  400 : #4fafda,
+  500 : #30a1d4,
+  600 : #2b99cf,
+  700 : #248fc9,
+  800 : #1e85c3,
+  900 : #1374b9,
+  A100 : #eaf5ff,
+  A200 : #b7dfff,
+  A400 : #84c8ff,
+  A700 : #6abcff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$ecm-primary-palette: mat-palette($ecm-primary);
+$ecm-accent-palette: mat-palette($ecm-accent, A200, A100, A400);
+
+$ecm-theme: mat-light-theme($ecm-primary-palette, $ecm-accent-palette);
+
+@include angular-material-theme($ecm-theme);
