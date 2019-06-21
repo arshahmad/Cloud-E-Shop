@@ -1,2 +1,40 @@
 @import "~src/sass/themes";
 @import "~src/sass/mixins/flex-mixins";
+.final {
+  @include em-fx-layout(column);
+.footer {
+  background-color: #1c2331;
+  height: 600px;
+  @include em-fx-layout-with-gap(row, 280px);
+  @include em-fx-layout-alignment(center, flex-start);
+  .useful-links {
+    @include em-fx-layout-with-gap(column, 20px);
+    @include em-fx-layout-alignment(flex-start, flex-start);
+  }
+  .resources {
+    @include em-fx-layout-with-gap(column, 20px);
+    @include em-fx-layout-alignment(flex-start, flex-start);
+  }
+  .tutorial {
+    @include em-fx-layout-with-gap(column, 20px);
+    @include em-fx-layout-alignment(flex-start, flex-start);
+  }
+  .company {
+    @include em-fx-layout-with-gap(column, 20px);
+    @include em-fx-layout-alignment(flex-start, flex-start);
+  }
+  p{
+    color: white;
+  }
+  h3 {
+    color: white;
+  }
+}
+  .copyright{
+    @include em-fx-layout-with-gap(row, 10px);
+    @include em-fx-layout-alignment(center, center);
+    background-color: #151c2a;
+    color: white;
+    height: 80px;
+  }
+}
