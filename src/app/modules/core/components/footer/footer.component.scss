@@ -24,6 +24,8 @@
     @include em-fx-layout-alignment(flex-start, flex-start);
   }
   p{
+    @include em-fx-layout-with-gap(row, 10px);
+    @include em-fx-layout-alignment(flex-start, center);
     color: white;
   }
   h3 {
@@ -36,5 +38,8 @@
     background-color: #151c2a;
     color: white;
     height: 80px;
+  }
+  .mat-icon {
+    color: white;
   }
 }
