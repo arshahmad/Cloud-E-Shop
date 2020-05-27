@@ -1,0 +1,13 @@
+<div class="container">
+<div class="server">
+  <span>Add server:</span>
+  <input  type="text" #serverName>
+  <button mat-raised-button color="primary" (click)="onAddServer(serverName.value)">Add server</button>
+</div>
+  <div *ngFor="let server of servers">
+    <div>{{server.name}} (ID: {{server.id}})</div>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="onSave()">Save Server</button>
+  <button mat-raised-button color="primary" (click)="getServer()">get Server</button>
+</div>

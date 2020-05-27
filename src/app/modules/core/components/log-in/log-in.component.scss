@@ -1,0 +1,14 @@
+@import "~src/sass/themes";
+@import "~src/sass/mixins/flex-mixins";
+
+.container {
+  @include em-fx-layout-with-gap(column, 40px);
+  @include em-fx-layout-alignment(flex-start, center);
+
+.server {
+
+  padding: 40px;
+  @include em-fx-layout-with-gap(row, 20px);
+  @include em-fx-layout-alignment(flex-start, center);
+}
+}
