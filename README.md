@@ -1,6 +1,7 @@
 # ECommerce
 
 This ECommerce project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+This is a beginner angular project comptrises mainly of HTML.
 
 ## Development server
 
